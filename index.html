@@ -8,6 +8,10 @@
     <link rel="dns-prefetch" href="//www.omdbapi.com">
     <link rel="preconnect" href="https://www.omdbapi.com" crossorigin>
     
+    <!-- Preload critical resources to reduce dependency chains -->
+    <link rel="modulepreload" href="/src/main.tsx">
+    <link rel="preload" href="/src/index.css" as="style">
+    
     <title>CineMuse - Discover Movies & TV Shows</title>
     <meta name="description" content="Discover your next favorite movie, series, or episode with CineMuse - your ultimate movie search and discovery platform" />
     <meta name="author" content="CineMuse" />
