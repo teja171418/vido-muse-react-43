@@ -10,7 +10,8 @@
     
     <!-- Preload critical resources to reduce dependency chains -->
     <link rel="modulepreload" href="/src/main.tsx">
-    <link rel="preload" href="/src/index.css" as="style">
+    <link rel="preload" href="/src/index.css" as="style" onload="this.onload=null;this.rel='stylesheet'" media="print">
+    <noscript><link rel="stylesheet" href="/src/index.css"></noscript>
     
     <title>CineMuse - Discover Movies & TV Shows</title>
     <meta name="description" content="Discover your next favorite movie, series, or episode with CineMuse - your ultimate movie search and discovery platform" />
