@@ -50,8 +50,7 @@ const Index = () => {
           movies={movies} 
           isLoading={isLoading}
           onMovieClick={(id) => {
-            console.log("Movie clicked:", id);
-            // Future: Navigate to movie details
+            window.location.href = `/movie/${id}`;
           }}
         />
 
