@@ -19,27 +19,27 @@ const MovieSearch = ({ onSearch, isLoading }: MovieSearchProps) => {
   };
 
   return (
-    <form onSubmit={handleSubmit} className="w-full max-w-2xl mx-auto mb-12">
+    <form onSubmit={handleSubmit} className="w-full max-w-2xl mx-auto mb-8 sm:mb-12 px-4 sm:px-0">
       <div className="relative">
         <Input
           type="text"
           placeholder="Search for movies, series, episodes..."
           value={query}
           onChange={(e) => setQuery(e.target.value)}
-          className="pr-24 h-14 text-lg bg-card/50 border-border/50 focus:border-primary/50 focus:ring-primary/25 placeholder:text-muted-foreground"
+          className="pr-20 sm:pr-24 h-12 sm:h-14 text-base sm:text-lg bg-card/50 border-border/50 focus:border-primary/50 focus:ring-primary/25 placeholder:text-muted-foreground touch-target"
           disabled={isLoading}
         />
         <Button 
           type="submit" 
           disabled={isLoading || !query.trim()}
-          className="absolute right-1 top-1 h-12 px-6 bg-primary hover:bg-primary/90 text-primary-foreground shadow-lg"
+          className="absolute right-1 top-1 h-10 sm:h-12 px-3 sm:px-6 bg-primary hover:bg-primary/90 text-primary-foreground shadow-lg touch-target"
         >
           {isLoading ? (
-            <Loader2 className="w-5 h-5 animate-spin" />
+            <Loader2 className="w-4 h-4 sm:w-5 sm:h-5 animate-spin" />
           ) : (
             <>
-              <Search className="w-5 h-5 mr-2" />
-              Search
+              <Search className="w-4 h-4 sm:w-5 sm:h-5 sm:mr-2" />
+              <span className="hidden sm:inline">Search</span>
             </>
           )}
         </Button>
