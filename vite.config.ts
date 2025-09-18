@@ -12,6 +12,8 @@ export default defineConfig(({ mode }) => ({
       "localhost",
       "r4lt9m-8080.csb.app", // <-- Add your allowed host here
     ],
+    // Optional: For client-side routing fallback (SPA), uncomment below:
+    // historyApiFallback: true,
   },
   plugins: [
     react(),
